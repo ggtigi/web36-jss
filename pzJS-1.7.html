@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let currentHours = prompt("Введите текущее значение часов:");
+        let currentMinutes = prompt("Введите текущее значение минут:");
+
+        const totalMinutesPerDay = 24 * 60;
+        let remainingMinutes = totalMinutesPerDay - (parseFloat(currentHours) * 60 + parseFloat(currentMinutes));
+
+        let remainingHours = Math.floor(remainingMinutes / 60);
+        let remainingMinutesOutput = remainingMinutes % 60;
+
+        alert("Осталось " + remainingHours + " часов " + remainingMinutesOutput + " минут до следующего дня.");
+    </script>
+</body>
+
+</html>
